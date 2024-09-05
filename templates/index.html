@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Football Dashboard</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fantasy Football Predictive Outlook</h1>
+
+        <!-- Position Selector -->
+        <label for="positionSelect">Select Position:</label>
+        <select id="positionSelect">
+            <option value="">--Select--</option>
+            <option value="qb">Quarterbacks</option>
+            <option value="wr">Wide Receivers</option>
+            <option value="rb">Running Backs</option>
+            <option value="te">Tight Ends</option>
+        </select>
+
+        <!-- Player Data Table -->
+        <div id="playerDataContainer" style="display:none; margin-top: 20px;">
+            <h2 id="positionTitle"></h2>
+            <table id="playerDataTable" border="1">
+                <thead>
+                    <tr id="tableHeader"></tr>
+                </thead>
+                <tbody id="playerDataBody">
+                    <!-- Player data will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
+
+
