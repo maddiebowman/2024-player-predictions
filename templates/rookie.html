@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Homepage</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="static/images/assets/favicon.png"> 
+    <link rel="stylesheet" href="static/css/rookie.css">
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/assets/logo.png') }}" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('fantasy') }}">Fantasy Performance</a></li>
+                <li><a href="{{ url_for('teams') }}">Team Performance</a></li>
+                <li><a href="{{ url_for('score') }}">Weekly Scoring</a></li>
+                <li><a href="{{ url_for('dashboard') }}">Fantasy Forecast</a></li>
+                <li><a href="{{ url_for('superbowl') }}">Superbowl Predictions</a></li>
+                <li>Rookie Rankings</li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Rookie Position Rankings</h1>
+        <div class="content">
+            <section class="rookie-overall">
+                <h2>Top Rookies</h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/qb/jayden_daniels.png" alt="Jayden Daniels">
+                            <h3>Jayden Daniels</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/qb" class="position-link">
+                                <p style="color: #0073e6;" class="player-position"><strong>QB</strong></p>
+                            </a>
+                            <img src="static/images/teams/WAS.jpeg" alt="Arizona Cardinals">
+                        </div>
+                        <div class="stats">
+                            <p>Passing Yards: <strong>410</strong></p>
+                            <p>Rushing Yards: <strong>132</strong></p>
+                            <p>Pass Completion: <strong>75.5%</strong></p>
+                            <p>Interceptions: <strong>0</strong></p>
+                            <p>Touchdowns: <strong>5</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/rb/trey_benson.jpeg" alt="Trey Benson">
+                            <h3>Trey Benson</h3>
+                        </div>
+                        <div class="team-info">
+                            <p style="color: #8621ca;" class="player-position"><strong>RB</strong></p>
+                            <img src="static/images/teams/ARI.jpeg" alt="Arizona Cardinals">
+                        </div>
+                        <div class="stats">
+                            <p>Rushing Yards: <strong>31</strong></p>
+                            <p>Rush Attempts: <strong>16</strong></p>
+                            <p>Receptions: <strong>2</strong></p>
+                            <p>Fumbles: <strong>0</strong></p>
+                            <p>Touchdowns: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/wr/malik_nabers.jpeg" alt="Malik Nabers">
+                            <h3>Malik Nabers</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/wr" class="position-link">
+                                <p style="color: #ca1d26;" class="player-position"><strong>WR</strong></p>
+                            </a>
+                            <img src="static/images/teams/NYG.jpeg" alt="Arizona Cardinals">
+                        </div>
+                        <div class="stats">
+                            <p>Receiving Yards: <strong>271</strong></p>
+                            <p>Targets: <strong>37</strong></p>
+                            <p>Receptions: <strong>31</strong></p>
+                            <p>Longest Reception: <strong>28</strong></p>
+                            <p>Touchdowns: <strong>5</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/te/brock_bowers.jpeg" alt="Brock Bowers">
+                            <h3>Brock Bowers</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/te" class="position-link">
+                            <p style="color: #fc7419;" class="player-position"><strong>TE</strong></p>
+                            </a>
+                            <img src="static/images/teams/LV.jpeg" alt="Las Vegas Raiders">
+                        </div>
+                        <div class="stats">
+                            <p>Solo Tackles: <strong>15</strong></p>
+                            <p>Assisted Tackles: <strong>15</strong></p>
+                            <p>Sacks: <strong>1</strong></p>
+                            <p>Forced Fumbles: <strong>1</strong></p>
+                            <p>Interceptions: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/dst/jared_verse.jpeg" alt="Jared Verse">
+                            <h3>Jared Verse</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/dst" class="position-link">
+                            <p style="color: #f8bf11;" class="player-position"><strong>LB</strong></p>
+                            </a>
+                            <img src="static/images/teams/LA.jpeg" alt="Los Angeles Rams">
+                        </div>
+                        <div class="stats">
+                            <p>Solo Tackles: <strong>15</strong></p>
+                            <p>Assisted Tackles: <strong>15</strong></p>
+                            <p>Sacks: <strong>1</strong></p>
+                            <p>Forced Fumbles: <strong>1</strong></p>
+                            <p>Interceptions: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card" style="border: #1ab31a;border-width:5px; border-style:outset;">
+                        <div class="player-info">
+                            <h4>ROTY Contenders</h4>
+                            <p ><strong>Jayden Daniels</strong></p>
+                            <p><strong>Malik Nabers</strong></p>
+                            <p><strong>Marvin Harrison Jr.</strong></p>
+                            <p><strong>Brock Bowers</strong></p>
+                        </div>
+                        <div class="banner">
+                            <a href="https://www.vegasinsider.com/nfl/odds/rookie-of-the-year/" target="_blank"><img src="static/images/assets/roty_banner.png" alt="banner"></a>
+                        </div>
+                        <div class="stats">
+                            <a href="https://www.vegasinsider.com/nfl/odds/rookie-of-the-year/" target="_blank"><p><strong>Jayden Daniels </strong></a> +175</p>
+                            <a href="https://www.vegasinsider.com/nfl/odds/rookie-of-the-year/" target="_blank"><p><strong>Malik Nabers </strong></a> +280</p>
+                            <a href="https://www.vegasinsider.com/nfl/odds/rookie-of-the-year/" target="_blank"><p><strong>Marvin Harrison Jr. </strong></a> +500</p>
+                            <a href="https://www.vegasinsider.com/nfl/odds/rookie-of-the-year/" target="_blank"><p><strong>Caleb Williams </strong></a> +700</p>
+                            <a href="https://www.vegasinsider.com/nfl/odds/rookie-of-the-year/" target="_blank"><p><strong>Bo Nix </strong></a> +3000</p>
+                        </div>
+                    </div>
+            </section>
+            <section class="quarterbacks">
+                <h2>Quarterbacks</h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/qb/jayden_daniels.png" alt="Jayden Daniels">
+                            <h3>Jayden Daniels</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/qb" class="position-link">
+                                <p style="color: #0073e6;" class="player-position"><strong>QB</strong></p>
+                            </a>
+                            <img src="static/images/teams/WAS.jpeg" alt="Arizona Cardinals">
+                        </div>
+                        <div class="stats">
+                            <p>Passing Yards: <strong>410</strong></p>
+                            <p>Rushing Yards: <strong>132</strong></p>
+                            <p>Pass Completion: <strong>75.5%</strong></p>
+                            <p>Interceptions: <strong>0</strong></p>
+                            <p>Touchdowns: <strong>5</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/qb/caleb_williams.jpeg" alt="Caleb Williams">
+                            <h3>Caleb Williams</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/qb" class="position-link">
+                                <p style="color: #0073e6;" class="player-position"><strong>QB</strong></p>
+                            </a>
+                            <img src="static/images/teams/CHI.jpeg" alt="Chicago Bears">
+                        </div>
+                        <div class="stats">
+                            <p>Passing Yards: <strong>630</strong></p>
+                            <p>Rushing Yards: <strong>67</strong></p>
+                            <p>Pass Completion: <strong>59.3%</strong></p>
+                            <p>Interceptions: <strong>4</strong></p>
+                            <p>Touchdowns: <strong>4</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/qb/bo_nix.jpeg" alt="Bo Nix">
+                            <h3>Bo Nix</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/qb" class="position-link">
+                                <p style="color: #0073e6;" class="player-position"><strong>QB</strong></p>
+                            </a>
+                            <img src="static/images/teams/DEN.jpeg" alt="Denver Broncos">
+                        </div>
+                        <div class="stats">
+                            <p>Passing Yards: <strong>600</strong></p>
+                            <p>Rushing Yards: <strong>107</strong></p>
+                            <p>Pass Completion: <strong>62.8%</strong></p>
+                            <p>Interceptions: <strong>4</strong></p>
+                            <p>Touchdowns: <strong>3</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/qb/drake_maye.jpeg" alt="Drake Maye">
+                            <h3>Drake Maye</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/qb" class="position-link">
+                                <p style="color: #0073e6;" class="player-position"><strong>QB</strong></p>
+                            </a>
+                            <img src="static/images/teams/NE.jpeg" alt="New England Patriots">
+                        </div>
+                        <div class="stats">
+                            <p>Passing Yards: <strong>22</strong></p>
+                            <p>Rushing Yards: <strong>12</strong></p>
+                            <p>Pass Completion: <strong>50.0%</strong></p>
+                            <p>Interceptions: <strong>0</strong></p>
+                            <p>Touchdowns: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/qb/jj_mccarthy.jpeg" alt="J.J. McCarthy">
+                            <h3>J.J. McCarthy</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/qb" class="position-link">
+                                <p style="color: #0073e6;" class="player-position"><strong>QB</strong></p>
+                            </a>
+                            <img src="static/images/teams/MIN.jpeg" alt="Minnesota Vikings">
+                        </div>
+                        <div class="stats">
+                            <p>Passing Yards: <strong>0</strong></p>
+                            <p>Rushing Yards: <strong>0</strong></p>
+                            <p>Pass Completion: <strong>00.0%</strong></p>
+                            <p>Interceptions: <strong>0</strong></p>
+                            <p>Touchdowns: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/qb/michael_penix.jpeg" alt="Michael Penix Jr.">
+                            <h3>Michael Penix Jr.</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/qb" class="position-link">
+                                <p style="color: #0073e6;" class="player-position"><strong>QB</strong></p>
+                            </a>
+                            <img src="static/images/teams/ATL.jpeg" alt="Atlanta Falcons">
+                        </div>
+                        <div class="stats">
+                            <p>Passing Yards: <strong>0</strong></p>
+                            <p>Rushing Yards: <strong>0</strong></p>
+                            <p>Pass Completion: <strong>00.0%</strong></p>
+                            <p>Interceptions: <strong>0</strong></p>
+                            <p>Touchdowns: <strong>0</strong></p>
+                        </div>
+                    </div>
+            </section>
+            <section class="running-backs">
+                <h2>Running Backs</h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/rb/bucky_irving.jpeg" alt="Bucky Irving">
+                            <h3>Bucky Irving</h3>
+                        </div>
+                        <div class="team-info">
+                            <p style="color: #8621ca;" class="player-position"><strong>RB</strong></p>
+                            <img src="static/images/teams/TB.jpeg" alt="Tampa Bay Bucaneers">
+                        </div>
+                        <div class="stats">
+                            <p>Rushing Yards: <strong>154</strong></p>
+                            <p>Rush Attempts: <strong>25</strong></p>
+                            <p>Receptions: <strong>5</strong></p>
+                            <p>Fumbles: <strong>0</strong></p>
+                            <p>Touchdowns: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/rb/trey_benson.jpeg" alt="Trey Benson">
+                            <h3>Trey Benson</h3>
+                        </div>
+                        <div class="team-info">
+                            <p style="color: #8621ca;" class="player-position"><strong>RB</strong></p>
+                            <img src="static/images/teams/ARI.jpeg" alt="Arizona Cardinals">
+                        </div>
+                        <div class="stats">
+                            <p>Rushing Yards: <strong>31</strong></p>
+                            <p>Rush Attempts: <strong>16</strong></p>
+                            <p>Receptions: <strong>2</strong></p>
+                            <p>Fumbles: <strong>0</strong></p>
+                            <p>Touchdowns: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/rb/jonathan_brooks.jpeg" alt="Jonathan Brooks">
+                            <h3>Jonathan Brooks</h3>
+                        </div>
+                        <div class="team-info">
+                            <p style="color: #8621ca;" class="player-position"><strong>RB</strong></p>
+                            <img src="static/images/teams/CAR.jpeg" alt="Carolina Panths">
+                        </div>
+                        <div class="stats">
+                            <p>Rushing Yards: <strong>0</strong></p>
+                            <p>Rush Attempts: <strong>0</strong></p>
+                            <p>Receptions: <strong>0</strong></p>
+                            <p>Fumbles: <strong>0</strong></p>
+                            <p>Touchdowns: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/rb/blake_corum.jpeg" alt="Blake Corum">
+                            <h3>Blake Corum</h3>
+                        </div>
+                        <div class="team-info">
+                            <p style="color: #8621ca;" class="player-position"><strong>RB</strong></p>
+                            <img src="static/images/teams/LA.jpeg" alt="Los Angeles Rams">
+                        </div>
+                        <div class="stats">
+                            <p>Rushing Yards: <strong>28</strong></p>
+                            <p>Rush Attempts: <strong>8</strong></p>
+                            <p>Receptions: <strong>0</strong></p>
+                            <p>Fumbles: <strong>0</strong></p>
+                            <p>Touchdowns: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/rb/tyrone_tracy.jpeg" alt="Tyrone Tracy">
+                            <h3>Tyrone Tracy</h3>
+                        </div>
+                        <div class="team-info">
+                            <p style="color: #8621ca;" class="player-position"><strong>RB</strong></p>
+                            <img src="static/images/teams/NYG.jpeg" alt="New York Giants">
+                        </div>
+                        <div class="stats">
+                            <p>Rushing Yards: <strong>27</strong></p>
+                            <p>Rush Attempts: <strong>8</strong></p>
+                            <p>Receptions: <strong>3</strong></p>
+                            <p>Fumbles: <strong>0</strong></p>
+                            <p>Touchdowns: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/rb/ray_davis.jpeg" alt="Ray Davis">
+                            <h3>Ray Davis</h3>
+                        </div>
+                        <div class="team-info">
+                            <p style="color: #8621ca;" class="player-position"><strong>RB</strong></p>
+                            <img src="static/images/teams/BUF.jpeg" alt="Buffalo Bills">
+                        </div>
+                        <div class="stats">
+                            <p>Rushing Yards: <strong>42</strong></p>
+                            <p>Rush Attempts: <strong>12</strong></p>
+                            <p>Receptions: <strong>2</strong></p>
+                            <p>Fumbles: <strong>0</strong></p>
+                            <p>Touchdowns: <strong>1</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="wide-receivers">
+                <h2>Wide Receivers</h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/wr/malik_nabers.jpeg" alt="Malik Nabers">
+                            <h3>Malik Nabers</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/wr" class="position-link">
+                                <p style="color: #ca1d26;" class="player-position"><strong>WR</strong></p>
+                            </a>
+                            <img src="static/images/teams/NYG.jpeg" alt="Arizona Cardinals">
+                        </div>
+                        <div class="stats">
+                            <p>Receiving Yards: <strong>271</strong></p>
+                            <p>Targets: <strong>37</strong></p>
+                            <p>Receptions: <strong>31</strong></p>
+                            <p>Longest Reception: <strong>28</strong></p>
+                            <p>Touchdowns: <strong>5</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/wr/marvin_harrison.jpeg" alt="Marvin Harrison Jr.">
+                            <h3>Marvin Harrison Jr.</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/wr" class="position-link">
+                                <p style="color: #ca1d26;" class="player-position"><strong>WR</strong></p>
+                            </a>
+                            <img src="static/images/teams/ARI.jpeg" alt="Arizona Cardinals">
+                        </div>
+                        <div class="stats">
+                            <p>Receiving Yards: <strong>198</strong></p>
+                            <p>Targets: <strong>22</strong></p>
+                            <p>Receptions: <strong>10</strong></p>
+                            <p>Longest Reception: <strong>28</strong></p>
+                            <p>Touchdowns: <strong>3</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/wr/xavier_worthy.jpeg" alt="Xavier Worthy">
+                            <h3>Xavier Worthy</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/wr" class="position-link">
+                                <p style="color: #ca1d26;" class="player-position"><strong>WR</strong></p>
+                            </a>
+                            <img src="static/images/teams/KC.jpeg" alt="Arizona Cardinals">
+                        </div>
+                        <div class="stats">
+                            <p>Receiving Yards: <strong>3,003</strong></p>
+                            <p>Targets: <strong>189</strong></p>
+                            <p>Receptions: <strong>189</strong></p>
+                            <p>Longest Reception: <strong>28</strong></p>
+                            <p>Touchdowns: <strong>21</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/wr/keon_coleman.jpeg" alt="Keon Coleman">
+                            <h3>Keon Coleman</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/wr" class="position-link">
+                                <p style="color: #ca1d26;" class="player-position"><strong>WR</strong></p>
+                            </a>
+                            <img src="static/images/teams/BUF.jpeg" alt="Buffalo Bills">
+                        </div>
+                        <div class="stats">
+                            <p>Receiving Yards: <strong>3,003</strong></p>
+                            <p>Targets: <strong>189</strong></p>
+                            <p>Receptions: <strong>189</strong></p>
+                            <p>Longest Reception: <strong>28</strong></p>
+                            <p>Touchdowns: <strong>21</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/wr/rome_odunze.jpeg" alt="Rome Odunze">
+                            <h3>Rome Odunze</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/wr" class="position-link">
+                                <p style="color: #ca1d26;" class="player-position"><strong>WR</strong></p>
+                            </a>
+                            <img src="static/images/teams/CHI.jpeg" alt="Chicago Bears">
+                        </div>
+                        <div class="stats">
+                            <p>Receiving Yards: <strong>3,003</strong></p>
+                            <p>Targets: <strong>189</strong></p>
+                            <p>Receptions: <strong>189</strong></p>
+                            <p>Longest Reception: <strong>28</strong></p>
+                            <p>Touchdowns: <strong>21</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/wr/brian_thomas.jpeg" alt="Brian Thomas Jr.">
+                            <h3>Brian Thomas Jr.</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/wr" class="position-link">
+                                <p style="color: #ca1d26;" class="player-position"><strong>WR</strong></p>
+                            </a>
+                            <img src="static/images/teams/JAX.jpeg" alt="Jaxonville Jaguars">
+                        </div>
+                        <div class="stats">
+                            <p>Receiving Yards: <strong>3,003</strong></p>
+                            <p>Targets: <strong>189</strong></p>
+                            <p>Receptions: <strong>189</strong></p>
+                            <p>Longest Reception: <strong>28</strong></p>
+                            <p>Touchdowns: <strong>21</strong></p>
+                        </div>
+                    </div>
+            </section>
+            <section class="tight-ends">
+                <h2>Tight Ends</h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/te/brock_bowers.jpeg" alt="Brock Bowers">
+                            <h3>Brock Bowers</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/te" class="position-link">
+                                <p style="color: #fc7419;" class="player-position"><strong>TE</strong></p>
+                            </a>
+                            <img src="static/images/teams/LV.jpeg" alt="Las Vegas Raiders">
+                        </div>
+                        <div class="stats">
+                            <p>Receiving Yards: <strong>197</strong></p>
+                            <p>Targets: <strong>21</strong></p>
+                            <p>Receptions: <strong>18</strong></p>
+                            <p>Longest Reception: <strong>27</strong></p>
+                            <p>Touchdowns: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/te/ben_sinnott.jpeg" alt="Ben Sinnott">
+                            <h3>Ben Sinnott</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/te" class="position-link">
+                                <p style="color: #fc7419;" class="player-position"><strong>TE</strong></p>
+                                </a>
+                            <img src="static/images/teams/WAS.jpeg" alt="Washington Commanders">
+                        </div>
+                        <div class="stats">
+                            <p>Receiving Yards: <strong>0</strong></p>
+                            <p>Targets: <strong>0</strong></p>
+                            <p>Receptions: <strong>0</strong></p>
+                            <p>Longest Reception: <strong>0</strong></p>
+                            <p>Touchdowns: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/te/theo_johnson.jpeg" alt="Theo Johnson">
+                            <h3>Theo Johnson</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/te" class="position-link">
+                                <p style="color: #fc7419;" class="player-position"><strong>TE</strong></p>
+                                </a>
+                            <img src="static/images/teams/NYG.jpeg" alt="New York Giants">
+                        </div>
+                        <div class="stats">
+                            <p>Receiving Yards: <strong>31</strong></p>
+                            <p>Targets: <strong>7</strong></p>
+                            <p>Receptions: <strong>2</strong></p>
+                            <p>Longest Reception: <strong>18</strong></p>
+                            <p>Touchdowns: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/te/jatavion_sanders.jpeg" alt="Ja'Tavion Sanders">
+                            <h3>Ja'Tavion Sanders</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/te" class="position-link">
+                                <p style="color: #fc7419;" class="player-position"><strong>TE</strong></p>
+                                </a>
+                            <img src="static/images/teams/CAR.jpeg" alt="Carolina Panthers">
+                        </div>
+                        <div class="stats">
+                            <p>Receiving Yards: <strong>0</strong></p>
+                            <p>Targets: <strong>0</strong></p>
+                            <p>Receptions: <strong>0</strong></p>
+                            <p>Longest Reception: <strong>0</strong></p>
+                            <p>Touchdowns: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/te/erick_all.jpeg" alt="Erick All">
+                            <h3>Erick All</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/te" class="position-link">
+                                <p style="color: #fc7419;" class="player-position"><strong>TE</strong></p>
+                                </a>
+                            <img src="static/images/teams/CIN.jpeg" alt="Washington Commanders">
+                        </div>
+                        <div class="stats">
+                            <p>Receiving Yards: <strong>0</strong></p>
+                            <p>Targets: <strong>0</strong></p>
+                            <p>Receptions: <strong>0</strong></p>
+                            <p>Longest Reception: <strong>0</strong></p>
+                            <p>Touchdowns: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/te/aj_barner.jpeg" alt="AJ Barner">
+                            <h3>AJ Barner</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/te" class="position-link">
+                                <p style="color: #fc7419;" class="player-position"><strong>TE</strong></p>
+                                </a>
+                            <img src="static/images/teams/SEA.jpeg" alt="Seattle Seahawks">
+                        </div>
+                        <div class="stats">
+                            <p>Receiving Yards: <strong>0</strong></p>
+                            <p>Targets: <strong>0</strong></p>
+                            <p>Receptions: <strong>0</strong></p>
+                            <p>Longest Reception: <strong>0</strong></p>
+                            <p>Touchdowns: <strong>0</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="defensive-players">
+                <h2>Defensive Players</h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/dst/jared_verse.jpeg" alt="Jared Verse">
+                            <h3>Jared Verse</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/dst" class="position-link">
+                                <p style="color: #f8bf11;" class="player-position"><strong>LB</strong></p>
+                                </a>
+                            <img src="static/images/teams/LA.jpeg" alt="Los Angeles Rams">
+                        </div>
+                        <div class="stats">
+                            <p>Solo Tackles: <strong>15</strong></p>
+                            <p>Assisted Tackles: <strong>15</strong></p>
+                            <p>Sacks: <strong>1</strong></p>
+                            <p>Forced Fumbles: <strong>1</strong></p>
+                            <p>Interceptions: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/dst/dallas_turner.jpeg" alt="Dallas Turner">
+                            <h3>Dallas Turner</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/dst" class="position-link">
+                                <p style="color: #f8bf11;" class="player-position"><strong>LB</strong></p>
+                                </a>
+                            <img src="static/images/teams/MIN.jpeg" alt="Minnesota Vikings">
+                        </div>
+                        <div class="stats">
+                            <p>Solo Tackles: <strong>15</strong></p>
+                            <p>Assisted Tackles: <strong>15</strong></p>
+                            <p>Sacks: <strong>1</strong></p>
+                            <p>Forced Fumbles: <strong>0</strong></p>
+                            <p>Interceptions: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/dst/byron_murphy.jpeg" alt="Byron Murphy">
+                            <h3>Byron Murphy</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/dst" class="position-link">
+                                <p style="color: #f8bf11;" class="player-position"><strong>DT</strong></p>
+                                </a>
+                            <img src="static/images/teams/SEA.jpeg" alt="Seattle Seahawks">
+                        </div>
+                        <div class="stats">
+                            <p>Solo Tackles: <strong>15</strong></p>
+                            <p>Assisted Tackles: <strong>15</strong></p>
+                            <p>Sacks: <strong>0.5</strong></p>
+                            <p>Forced Fumbles: <strong>0</strong></p>
+                            <p>Interceptions: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/dst/laiatu_latu.jpeg" alt="Laiatu Latu">
+                            <h3>Laiatu Latu</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/dst" class="position-link">
+                                <p style="color: #f8bf11;" class="player-position"><strong>DE</strong></p>
+                                </a>
+                            <img src="static/images/teams/IND.jpeg" alt="Indianapolis Colts">
+                        </div>
+                        <div class="stats">
+                            <p>Solo Tackles: <strong>15</strong></p>
+                            <p>Assisted Tackles: <strong>15</strong></p>
+                            <p>Sacks: <strong>1</strong></p>
+                            <p>Forced Fumbles: <strong>1</strong></p>
+                            <p>Interceptions: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/dst/quinyon_mitchell.jpeg" alt="Quinyon Mitchell">
+                            <h3>Quinyon Mitchell</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/dst" class="position-link">
+                                <p style="color: #f8bf11;" class="player-position"><strong>CB</strong></p>
+                                </a>
+                            <img src="static/images/teams/PHI.jpeg" alt="Philidelphia Eagles">
+                        </div>
+                        <div class="stats">
+                            <p>Solo Tackles: <strong>15</strong></p>
+                            <p>Assisted Tackles: <strong>15</strong></p>
+                            <p>Sacks: <strong>0</strong></p>
+                            <p>Forced Fumbles: <strong>0</strong></p>
+                            <p>Interceptions: <strong>0</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/dst/kamari_lassiter.jpeg" alt="Kamari Lassiter">
+                            <h3>Kamari Lassiter</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/dst" class="position-link">
+                                <p style="color: #f8bf11;" class="player-position"><strong>CB</strong></p>
+                                </a>
+                            <img src="static/images/teams/HOU.jpeg" alt="Houston Texans">
+                        </div>
+                        <div class="stats">
+                            <p>Solo Tackles: <strong>15</strong></p>
+                            <p>Assisted Tackles: <strong>15</strong></p>
+                            <p>Sacks: <strong>0</strong></p>
+                            <p>Forced Fumbles: <strong>0</strong></p>
+                            <p>Interceptions: <strong>1</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <div class="logo">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/assets/logo.png') }}" alt="Logo">
+            </a>
+        </div>
+    </footer>
+    <script src="static/js/rookie.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Scores | Fantasy Homepage</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="static/images/assets/favicon.png"> 
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/score.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/assets/logo.png') }}" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('fantasy') }}">Fantasy Performance</a></li>
+                <li><a href="{{ url_for('teams') }}">Team Performance</a></li>
+                <li><a href="{{ url_for('rookie') }}">Rookie Rankings</a></li>
+                <li><a href="{{ url_for('dashboard') }}">Fantasy Forecast</a></li>
+                <li><a href="{{ url_for('superbowl') }}">Superbowl Predictions</a></li>
+                <li>Weekly Scoring</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Final Scores by Week</h1>
+        <div class="week-selector">
+            <button id="prevWeek">Previous Week</button>
+            <span id="currentWeek">Week 1</span>
+            <button id="nextWeek">Next Week</button>
+        </div>
+        <div class="week-list">
+            
+        </div>
+        <div id="scoresGrid">
+            <!-- 16 game containers will be dynamically inserted here -->
+        </div>
+    </div>
+    <footer>
+        <div class="logo">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/assets/logo.png') }}" alt="Logo">
+            </a>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/score.js') }}"></script>
+</body>
+</html>

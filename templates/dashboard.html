@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fantasy Forecast | Fantasy Homepage</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="static/images/assets/favicon.png"> 
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/assets/logo.png') }}" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('fantasy') }}">Fantasy Performance</a></li>
+                <li><a href="{{ url_for('teams') }}">Team Performance</a></li>
+                <li><a href="{{ url_for('score') }}">Weekly Scoring</a></li>
+                <li><a href="{{ url_for('rookie') }}">Rookie Rankings</a></li>
+                <li><a href="{{ url_for('superbowl') }}">Superbowl Predictions</a></li>
+                <li>Fantasy Forecast</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Player Predictions - 2024 Fantasy Football Season</h1>
+        <div class="position-selector">
+            <label for="positionSelect">Select Position  <i class="bi bi-trophy"></i> </label>
+            <select id="positionSelect">
+                <option value=""> Select </option>
+                <option value="qb">Quarterback (QB)</option>
+                <option value="wr">Wide Receiver (WR)</option>
+                <option value="rb">Running Back (RB)</option>
+                <option value="te">Tight End (TE)</option>
+            </select>
+        </div>
+        <div id="playerDataContainer">
+            <h2 id="positionTitle"></h2>
+            <table id="playerDataTable">
+                <thead>
+                    <tr id="tableHeader"></tr>
+                </thead>
+                <tbody id="playerDataBody">
+                    <!-- Player data dynamically inserted -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="playerPopup" class="player-popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <img id="playerImage" src="" alt="Player Image">
+                <div class="player-info">
+                    <h3 id="playerName"></h3>
+                    <p id="playerPosition"></p>
+                    <p id="playerRank"></p>
+                </div>
+            </div>
+            <div class="details-and-logo">
+                <div class="player-details">
+                    <p id="playerAge"></p>
+                    <p id="playerHeight"></p>
+                    <p id="playerWeight"></p>
+                    <p id="playerDraft"></p>
+                    <p id="playerSeasons"></p>
+                </div>
+                <div class="team-info">
+                    <p id="teamName"></p>
+                    <img id="teamLogo" src="" alt="Team Logo">
+                </div>
+            </div>
+        </div>
+        <button id="closePopup" class="close-btn">X</button>
+    </div>
+    <footer>
+        <div class="logo">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/assets/logo.png') }}" alt="Logo">
+            </a>
+        </div>
+    </footer>
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
+
+
+

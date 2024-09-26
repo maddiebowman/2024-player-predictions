@@ -1,0 +1,263 @@
+body {
+    font-family: 'Tahoma', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Tahoma', sans-serif;
+    background-color: transparent;
+    border: none;
+    color: #efefef;
+    font-size: 36px;
+    line-height: 1;
+    outline: none;
+    padding: 5px;
+    margin-top: -30px;
+    margin-bottom: 20px;
+    margin-right: 28px;
+    text-align: right;
+}
+
+.container {
+    display: flex;
+}
+
+aside {
+    background-color: #013369;
+    color: #fff;
+    width: 250px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    transition: width 0.3s;
+}
+
+aside nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside nav ul li {
+    margin-bottom: 16px;
+}
+
+aside nav ul li a {
+    font-family: 'Tahoma', sans-serif;
+    display: block;
+    margin-left: 10px;
+    padding: 15px 25px;
+    font-size: 16px;
+    background-color: #429519; 
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+aside nav ul li a:hover {
+    background-color: #377f13;
+}
+
+aside.collapsed nav ul li a {
+    display: none;
+}
+
+aside .logo img {
+    align-content: center;
+    height: 130px;
+    padding-top: 10px;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    gap: 15px;
+    padding: 20px;
+}
+
+.rookie-watch, .top-performers {
+    flex: 1;
+}
+
+.rookie-watch h2, .top-performers h2 {
+    font-family: 'Tahoma', sans-serif;
+    color: #2f3767;
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 15px; 
+}
+
+.card img {
+    width: 140px; 
+    height: 100px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.card h3 {
+    font-family: 'Tahoma', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+
+.card .team-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px; 
+}
+
+.card .team-info p {
+    font-family: 'Tahoma', sans-serif;
+    text-align: center;
+    font-size: 17px;
+    background-color: #e2e2e2a7;
+    padding: 5px 12px 5px 12px;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.307);
+    margin-bottom: 30px;
+}
+.card .team-info p:hover {
+    cursor: pointer;
+    background-color: #e2e2e2;
+}
+
+.card .team-info img {
+    width: 90px;
+    height: 60px;
+}
+
+.card .team-info img:hover {
+    cursor: pointer;
+}
+
+.card a{
+    text-decoration: none;
+}
+
+.card .stats {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    text-align: left;
+    width: 200px; 
+    border-left: 1px solid #ddd;
+    padding-left: 20px;
+}
+
+.card .stats p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Responsive display */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .team-info, .stats {
+        width: 100%;
+        text-align: left;
+        padding-left: 0;
+        border-left: none;
+    }
+}
+
+.score-scroller {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5px;
+    background-color: #e2e2e2;
+}
+
+#scrollContent {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    animation: scroll-left 25s linear infinite;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.game-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 50px;
+}
+
+.team-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.at-symbol {
+    margin: 0 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #429519;
+}
+
+.week-header {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #013369;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+
+footer {
+    background-color: #e2e2e2;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
+footer .logo img {
+    height: 90px;
+    padding-top: 10px;
+}

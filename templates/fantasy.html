@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Fantasy Player Performance</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Top Fantasy Players</h1>
+    </header>
+    
+    <div id="player-container">
+        <!-- Players will be dynamically inserted here -->
+    </div>
+
+    <script>
+        // Fetch top players from the Flask backend
+        async function fetchTopPlayers() {
+            try {
+                const response = await fetch('/api/fantasy/top-players');
+                const data = await response.json();
+
+                // Build the HTML for each position
+                let container = document.getElementById('player-container');
+                container.innerHTML = '';
+
+                for (const [position, players] of Object.entries(data)) {
+                    let positionDiv = document.createElement('div');
+                    positionDiv.classList.add('position-group');
+                    positionDiv.innerHTML = `<h2>${position}</h2>`;
+
+                    players.forEach(player => {
+                        let playerDiv = document.createElement('div');
+                        playerDiv.classList.add('player');
+                        playerDiv.innerHTML = `
+                            <p><strong>${player.name}</strong></p>
+                            <p>Team: ${player.team}</p>
+                            <p>Points: ${player.points}</p>
+                        `;
+                        positionDiv.appendChild(playerDiv);
+                    });
+
+                    container.appendChild(positionDiv);
+                }
+            } catch (error) {
+                console.error('Error fetching fantasy players:', error);
+            }
+        }
+
+        // Call the function when the page loads
+        window.onload = fetchTopPlayers;
+    </script>
+</body>
+</html>

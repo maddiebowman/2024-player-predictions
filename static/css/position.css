@@ -1,0 +1,272 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #013369;
+    color: white;
+    box-shadow: inset;
+}
+
+header .logo img {
+    height: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 60px;
+    padding-right: 60px;
+}
+
+header nav ul li {
+    margin: 0;
+    font-weight: bold;
+    color: #429519;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #429519;
+}
+
+button{
+    color: #377f13;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #eaeaea;
+    padding: 8px 12px;
+    margin: 15px 15px 5px 100px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.307);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #eaeaea;
+}
+
+h1{
+    margin-top: 50px;
+    margin-bottom: -20px;
+    text-align: center;
+    color: #013369;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 40px;
+}
+
+.defensive-players, .quarterbacks, .running-backs, .rookie-overall, .tight-ends, .wide-receivers {
+    flex: 1;
+}
+
+.defensive-players h2 {
+    color: #2f3767;
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.rookie-overall h2 {
+    color: #2f3767;
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.running-backs h2 {
+    color: #2f3767;
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.quarterbacks h2 {
+    color: #2f3767;
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.wide-receivers h2 {
+    color: #2f3767;
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tight-ends h2 {
+    color: #2f3767;
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 8px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.card img {
+    width: 140px; 
+    height: 100px;
+    display: block;
+    margin: 0 auto 10px auto; 
+}
+
+.banner img {
+    margin-right: -105px;
+    width: 100px;
+    height: 100%;
+    border-left: 1px solid #ddd;
+    padding-left: 6px;
+}
+
+.banner img:hover{
+    cursor: pointer;
+}
+
+.card h3 {
+    font-size: 16px;
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+
+.card h4 {
+    font-size: 20px;
+    margin: 10px 0 10px 10px;
+    color: #429519;
+}
+
+.card p{
+    font-size: 14px;
+    margin: 10px 10px 10px 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #429519;
+}
+
+a:hover{
+    cursor: pointer;
+    color: #377f13;
+}
+
+.card .team-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px; 
+}
+
+.card .team-info p {
+    text-align: center;
+    font-size: 17px;
+    background-color: #e2e2e2a7;
+    padding: 5px 12px 5px 12px;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.307);
+    margin-bottom: 30px;
+}
+.card .team-info p:hover {
+    cursor: pointer;
+    background-color: #e2e2e2;
+}
+
+.card .team-info img {
+    width: 90px;
+    height: 60px;
+}
+
+.card .team-info img:hover {
+    cursor: pointer;
+}
+
+.card .stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 200px; 
+    border-left: 1px solid #ddd;
+    padding-left: 5px;
+}
+
+.card .stats p {
+    margin: 5px 15px;
+    font-size: 14px;
+}
+
+/* Responsive display */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .team-info, .stats {
+        width: 100%;
+        text-align: left;
+        padding-left: 0;
+        border-left: none;
+    }
+}
+
+footer {
+    background-color: #e2e2e2;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
+footer .logo img {
+    height: 90px;
+    padding-top: 10px;
+}

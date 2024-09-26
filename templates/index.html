@@ -3,39 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fantasy Football Dashboard</title>
-    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <title>Fantasy Homepage</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="static/images/assets/favicon.png"> 
+    <link rel="stylesheet" href="static/css/index.css">
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
 </head>
 <body>
+    <header>
+        <a href="/score"><div class="score-scroller">
+            <div class="scroll-content" id="scrollContent"></div>
+        </div></a>
+    </header>
     <div class="container">
-        <h1>Fantasy Football Predictive Outlook</h1>
-
-        <!-- Position Selector -->
-        <label for="positionSelect">Select Position:</label>
-        <select id="positionSelect">
-            <option value="">--Select--</option>
-            <option value="qb">Quarterbacks</option>
-            <option value="wr">Wide Receivers</option>
-            <option value="rb">Running Backs</option>
-            <option value="te">Tight Ends</option>
-        </select>
-
-        <!-- Player Data Table -->
-        <div id="playerDataContainer" style="display:none; margin-top: 20px;">
-            <h2 id="positionTitle"></h2>
-            <table id="playerDataTable" border="1">
-                <thead>
-                    <tr id="tableHeader"></tr>
-                </thead>
-                <tbody id="playerDataBody">
-                    <!-- Player data will be dynamically inserted here -->
-                </tbody>
-            </table>
+        <aside>
+            <div class="logo">
+                <a href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='images/assets/logo.png') }}" alt="Logo">
+                </a>
+            </div>
+            <h1>Fantasy Homepage</h1>
+            <nav>
+                <ul>
+                    <li><a href="/fantasy">Fantasy Performance</a></li>
+                    <li><a href="/teams">Team Performance</a></li>
+                    <li><a href="/score">Weekly Scoring</a></li>
+                    <li><a href="/rookie">Rookie Rankings</a></li>
+                    <li><a href="/dashboard">Fantasy Forecast</a></li>
+                    <li><a href="/superbowl">Superbowl Predictions</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="content">
+            <section class="rookie-watch">
+                <h2>Rookie Watch List</h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/qb/jayden_daniels.png" alt="Jayden Daniels">
+                            <h3>Jayden Daniels</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/qb" class="position-link">
+                                <p style="color: #0073e6;" class="player-position"><strong>QB</strong></p>
+                            </a>
+                            <img src="static/images/teams/WAS.jpeg" alt="Arizona Cardinals">
+                        </div>
+                        <div class="stats">
+                            <p><strong>LSU</strong></p>
+                            <p>Passing Yards: <strong>12,749</strong></p>
+                            <p>Interceptions: <strong>20</strong></p>
+                            <p><strong>Touchdowns <i class="bi bi-trophy"></i>  89</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/wr/marvin_harrison.jpeg" alt="Marvin Harrison Jr.">
+                            <h3>Marvin Harrison Jr.</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/wr" class="position-link">
+                                <p style="color: #e8252f;" class="player-position"><strong>WR</strong></p>
+                            </a>
+                            <img src="static/images/teams/ARI.jpeg" alt="Arizona Cardinals">
+                        </div>
+                        <div class="stats">
+                            <p><strong>Ohio State</strong></p>
+                            <p>Receptions: <strong>155</strong></p>
+                            <p>Receiving Yards: <strong>2,613</strong></p>
+                            <p><strong>Touchdowns <i class="bi bi-trophy"></i>  32</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/wr/malik_nabers.jpeg" alt="Malik Nabers">
+                            <h3>Malik Nabers</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/wr" class="position-link">
+                                <p style="color: #e8252f;" class="player-position"><strong>WR</strong></p>
+                            </a>
+                            <img src="static/images/teams/NYG.jpeg" alt="Arizona Cardinals">
+                        </div>
+                        <div class="stats">
+                            <p><strong>LSU</strong></p>
+                            <p>Receptions: <strong>189</strong></p>
+                            <p>Receiving Yards: <strong>3,003</strong></p>
+                            <p><strong>Touchdowns <i class="bi bi-trophy"></i>  21</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/wr/xavier_worthy.jpeg" alt="Xavier Worthy">
+                            <h3>Xavier Worthy</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/wr" class="position-link">
+                                <p style="color: #e8252f;" class="player-position"><strong>WR</strong></p>
+                            </a>
+                            <img src="static/images/teams/KC.jpeg" alt="Arizona Cardinals">
+                        </div>
+                        <div class="stats">
+                            <p><strong>University of Texas</strong></p>
+                            <p>Receptions: <strong>197</strong></p>
+                            <p>Receiving Yards: <strong>2,755</strong></p>
+                            <p><strong>Touchdowns <i class="bi bi-trophy"></i>  27</strong></p>
+                        </div>
+                </div>
+            </section>
+            <section class="top-performers">
+                <h2>Top Position Performers</h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/qb/baker_mayfield.jpeg" alt="Baker Mayfield">
+                            <h3>Baker Mayfield</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/qb" class="position-link">
+                            <p style="color: #0073e6;" class="player-position"><strong>QB</strong></p>
+                            </a>
+                            <img src="static/images/teams/TB.jpeg" alt="Arizona Cardinals">
+                        </div>
+                        <div class="stats">
+                            <p>Passing Yards: <strong>474</strong></p>
+                            <p>Pass Completion: <strong>73.5%</strong></p>
+                            <p>Interceptions: <strong>1</strong></p>
+                            <p><strong>Touchdowns <i class="bi bi-trophy"></i>  5</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/rb/alvin_kamara.jpeg" alt="Alvin Kamara">
+                            <h3>Alvin Kamara</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/rb" class="position-link">
+                            <p style="color: #8621ca" class="player-position"><strong>RB</strong></p>
+                            </a>
+                            <img src="static/images/teams/NO.jpeg" alt="Arizona Cardinals">
+                        </div>
+                        <div class="stats">
+                            <p>Rushing Yards: <strong>198</strong></p>
+                            <p>Rush Attempts: <strong>35</strong></p>
+                            <p>Receptions: <strong>7</strong></p>
+                            <p><strong>Touchdowns <i class="bi bi-trophy"></i>  4</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/wr/nico_collins.jpeg" alt="Nico Collins">
+                            <h3>Nico Collins</h3>
+                        </div>
+                        <div class="team-info">
+                            <a href="/wr" class="position-link">
+                                <p style="color: #e8252f;" class="player-position"><strong>WR</strong></p>
+                            </a>
+                            <img src="static/images/teams/HOU.jpeg" alt="Arizona Cardinals">
+                        </div>
+                        <div class="stats">
+                            <p>Receiving Yards: <strong>252</strong></p>
+                            <p>Targets: <strong>18</strong></p>
+                            <p>Receptions: <strong>14</strong></p>
+                            <p><strong>Touchdowns <i class="bi bi-trophy"></i>  1</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="player-info">
+                            <img src="static/images/te/isaiah_likely.jpeg" alt="Isaiah Likely">
+                            <h3>Isaiah Likely</h3>
+                            </div>
+                            <div class="team-info">
+                                <a href="/te" class="position-link">
+                                <p style="color: #fc7419; " class="player-position"><strong>TE</strong></p>
+                                </a>
+                                <img src="static/images/teams/BAL.jpeg" alt="Arizona Cardinals">
+                            </div>
+                            <div class="stats">
+                                <p>Receiving Yards: <strong>137</strong></p>
+                                <p>Targets: <strong>15</strong></p>
+                                <p>Receptions: <strong>11</strong></p>
+                                <p><strong>Touchdowns <i class="bi bi-trophy"></i>  1</strong></p>
+                            </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
-
-    <script src="/static/js/dashboard.js"></script>
+    <footer>
+        <div class="logo">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/assets/logo.png') }}" alt="Logo">
+            </a>
+        </div>
+    </footer>
+    <script src="static/js/index.js"></script>
 </body>
 </html>
-
-

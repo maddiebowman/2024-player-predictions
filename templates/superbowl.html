@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superbowl Predictions | Fantasy Homepage</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="static/images/assets/favicon.png"> 
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/superbowl.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/assets/logo.png') }}" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('fantasy') }}">Fantasy Performance</a></li>
+                <li><a href="{{ url_for('teams') }}">Team Performance</a></li>
+                <li><a href="{{ url_for('score') }}">Weekly Scoring</a></li>
+                <li><a href="{{ url_for('rookie') }}">Rookie Rankings</a></li>
+                <li><a href="{{ url_for('dashboard') }}">Fantasy Forecast</a></li>
+                <li>Superbowl Predictions</li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Superbowl Predictions</h1>
+    <div class="background-wrapper">
+        <main>
+            <!-- AFC Container -->
+            <div class="conference-container afc-container">
+                <h2>AFC</h2>
+                <div class="team-container">
+                    <div class="team-box">
+                        <img src="{{ url_for('static', filename='images/teams/KC.jpeg') }}" alt="Kansas City Chiefs">
+                        <p>Kansas City Chiefs</p>
+                        <p>+450</p>
+                    </div>
+                    <div class="team-box">
+                        <img src="{{ url_for('static', filename='images/teams/HOU.jpeg') }}" alt="Houston Texans">
+                        <p>Houston Texans</p>
+                        <p>+650</p>
+                    </div>
+                    <div class="team-box">
+                        <img src="{{ url_for('static', filename='images/teams/BUF.jpeg') }}" alt="Buffalo Bills">
+                        <p>Buffalo Bills</p>
+                        <p>+1100</p>
+                    </div>
+                    <div class="team-box">
+                        <img src="{{ url_for('static', filename='images/teams/MIA.jpeg') }}" alt="Miami Dolphins">
+                        <p>Miami Dolphins</p>
+                        <p>+4000</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NFC Container -->
+            <div class="conference-container nfc-container">
+                <h2>NFC</h2>
+                <div class="team-container">
+                    <div class="team-box">
+                        <img src="{{ url_for('static', filename='images/teams/SF.jpeg') }}" alt="San Francisco 49ers">
+                        <p>San Francisco 49ers</p>
+                        <p>+600</p>
+                    </div>
+                    <div class="team-box">
+                        <img src="{{ url_for('static', filename='images/teams/DET.jpeg') }}" alt="Detroit Lions">
+                        <p>Detroit Lions</p>
+                        <p>+1200</p>
+                    </div>
+                    <div class="team-box">
+                        <img src="{{ url_for('static', filename='images/teams/PHI.jpeg') }}" alt="Philadelphia Eagles">
+                        <p>Philadelphia Eagles</p>
+                        <p>+1200</p>
+                    </div>
+                    <div class="team-box">
+                        <img src="{{ url_for('static', filename='images/teams/NO.jpeg') }}" alt="New Orleans Saints">
+                        <p>New Orleans Saints</p>
+                        <p>+2000</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="#">Data & Attributions</a></li>
+        </ul>
+    </footer>
+    <script src="{{ url_for('static', filename='js/superbowl.js') }}"></script>
+</body>
+</html>

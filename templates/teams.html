@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Performance | Fantasy Homepage</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="static/images/assets/favicon.png"> 
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/teams.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/assets/logo.png') }}" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('fantasy') }}">Fantasy Performance</a></li>
+                <li><a href="{{ url_for('score') }}">Weekly Scoring</a></li>
+                <li><a href="{{ url_for('rookie') }}">Rookie Rankings</a></li>
+                <li><a href="{{ url_for('dashboard') }}">Fantasy Forecast</a></li>
+                <li><a href="{{ url_for('superbowl') }}">Superbowl Predictions</a></li>
+                <li>Team Performance</li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Team Performance by Divison</h1>
+    <div class="background-wrapper">
+        <main>
+            <!-- AFC Conference Container -->
+            <div class="conference-container afc-container">
+                <h2>AFC</h2>
+                <div class="division-grid">
+                    <!-- AFC East Division -->
+                    <h3>AFC East</h3>
+                    <div class="division-container">
+                        <div class="team-box">
+                            <p>Buffalo Bills</p>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/BUF.jpeg') }}" alt="Buffalo Bills">
+                                <div class="team-record">3-0</div>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <p>New York Jets</p>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/NYJ.jpeg') }}" alt="New York Jets">
+                                <div class="team-record">2-1</div>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <p>Miami Dolphins</p>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/MIA.jpeg') }}" alt="Miami Dolphins">
+                                <div class="team-record">1-2</div>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <p>New England Patriots</p>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/NE.jpeg') }}" alt="New England Patriots">
+                                <div class="team-record">1─2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- AFC West Division -->
+                    <h3>AFC West</h3>
+                    <div class="division-container">
+                        <div class="team-box">
+                            <div class="team-info">
+                                <div class="team-record">3-0</div>
+                                <img src="{{ url_for('static', filename='images/teams/KC.jpeg') }}" alt="Kansas City Chiefs">
+                                <p>Kansas City Chiefs</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">2-1</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/LAC.jpeg') }}" alt="Los Angeles Chargers">
+                                <p>Los Angeles Chargers</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">1-2</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/DEN.jpeg') }}" alt="Denver Broncos">
+                                <p>Denver Broncos</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">1-2</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/LV.jpeg') }}" alt="Las Vegas Raiders">
+                                <p>Las Vegas Raiders</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- AFC North Division -->
+                    <h3>AFC North</h3>
+                    <div class="division-container">
+                        <div class="team-box">
+                            <div class="team-record">3-0</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/PIT.jpeg') }}" alt="Pittsburgh Steelers">
+                                <p>Pittsburgh Steelers</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">1-2</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/CLE.jpeg') }}" alt="Cleveland Browns">
+                                <p>Cleveland Browns</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">0-3</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/CIN.jpeg') }}" alt="Cincinnati Bengals">
+                                <p>Cincinnati Bengals</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">1-2</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/BAL.jpeg') }}" alt="Baltimore Ravens">
+                                <p>Baltimore Ravens</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- AFC South Division -->
+                    <h3>AFC South</h3>
+                    <div class="division-container">
+                        <div class="team-box">
+                            <div class="team-record">2-1</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/HOU.jpeg') }}" alt="Houston Texans">
+                                <p>Houston Texans</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">0-3</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/TEN.jpeg') }}" alt="Tennessee Titans">
+                                <p>Tennessee Titans</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">0-3</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/JAX.jpeg') }}" alt="Jacksonville Jaguars">
+                                <p>Jacksonville Jaguars</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">1-2</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/IND.jpeg') }}" alt="Indianapolis Colts">
+                                <p>Indianapolis Colts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- NFC Conference Container -->
+            <div class="conference-container nfc-container">
+                <h2>NFC</h2>
+                <div class="division-grid">
+                    <!-- NFC East Division -->
+                    <h3>NFC East</h3>
+                    <div class="division-container">
+                        <div class="team-box">
+                            <div class="team-record">2-1</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/WAS.jpeg') }}" alt="Washington Commanders">
+                                <p>Washington Commanders</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">2-1</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/PHI.jpeg') }}" alt="Philidelphia Eagles">
+                                <p>Philidelphia Eagles</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">1-2</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/DAL.jpeg') }}" alt="Dallas Cowboys">
+                                <p>Dallas Cowboys</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">1-2</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/NYG.jpeg') }}" alt="New York Giants">
+                                <p>New York Giants</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- NFC West Division -->
+                    <h3>NFC West</h3>
+                    <div class="division-container">
+                        <div class="team-box">
+                            <div class="team-record">3-0</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/SEA.jpeg') }}" alt="Seattle Seahawks">
+                                <p>Seattle Seahawks</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">1-2</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/ARI.jpeg') }}" alt="Arizona Cardinals">
+                                <p>Arizona Cardinals</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">1-2</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/SF.jpeg') }}" alt="San Francisco 49ers">
+                                <p>San Francisco 49ers</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">1-2</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/LA.jpeg') }}" alt="Los Angeles Rams">
+                                <p>Los Angeles Rams</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- NFC North Division -->
+                    <h3>NFC North</h3>
+                    <div class="division-container">
+                        <div class="team-box">
+                            <div class="team-record">3-0</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/MIN.jpeg') }}" alt="Minnestoa Vikings">
+                                <p>Minnestoa Vikings</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">2-1</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/DET.jpeg') }}" alt="Detroit Lions">
+                                <p>Detroit Lions</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">1-2</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/CHI.jpeg') }}" alt="Chicago Bears">
+                                <p>Chicago Bears</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">2-1</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/GB.jpeg') }}" alt="Green Bay Packers">
+                                <p>Green Bay Packers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- NFC South Division -->
+                    <h3>NFC South</h3>
+                    <div class="division-container">
+                        <div class="team-box">
+                            <div class="team-record">2-1</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/NO.jpeg') }}" alt="New Orleans Saints">
+                                <p>New Orleans Saints</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">2-0</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/TB.jpeg') }}" alt="Tampa Bay Buccaneers">
+                                <p>Tampa Bay Buccaneers</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">1-2</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/ATL.jpeg') }}" alt="Atlanta Falcons">
+                                <p>Atlanta Falcons</p>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-record">1-2</div>
+                            <div class="team-info">
+                                <img src="{{ url_for('static', filename='images/teams/CAR.jpeg') }}" alt="Carolina Panthers">
+                                <p>Carolina Panthers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/teams.js') }}"></script>
+</body>
+</html>
+

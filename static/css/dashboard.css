@@ -5,32 +5,280 @@ body {
     padding: 0;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #013369;
+    color: white;
+    box-shadow: inset;
+}
+
+header .logo img {
+    height: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 60px;
+    padding-right: 60px;
+}
+
+header nav ul li {
+    margin: 0;
+    font-weight: bold;
+    color: #429519;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #429519;
+}
+
 .container {
-    width: 80%;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 20px auto;
+    margin-top: 50px;
+    background-color: white;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 h1 {
     text-align: center;
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 80px;
+    color: #013369;
 }
 
 .position-selector {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
-.player-card {
+/* Position selector styling */
+label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 50px;
+    color: #013369;
+}
+
+select {
+    padding: 10px;
+    font-style: italic;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    font-size: 16px;
     background-color: #fff;
+    color: #429519;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:hover,
+select:focus {
+    border-color: #429519;
+    box-shadow: 0 0 5px #429519;
+}
+
+/* Player data container styling */
+#playerDataContainer {
+    max-height: 900px; 
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-top: 20px;
     border: 1px solid #ccc;
-    border-radius: 8px;
     padding: 15px;
-    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
 }
 
-.player-card h3 {
-    margin-top: 0;
+/* Table styling for player data */
+#playerDataContainer table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: left;
 }
 
-.player-card p {
+#playerDataContainer th, #playerDataContainer td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Table header styling for different positions */
+#playerDataTable th {
+    color: white;
+    font-size: 14px;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    position: sticky;
+    top: 0; /* Sticky header */
+    z-index: 1;
+}
+
+/* CSS color for position-specific table headers */
+.header-qb th {
+    background-color: #0073e6; 
+    color: white;
+}
+
+.header-wr th {
+    background-color: #e8252f;
+    color: white;
+}
+
+.header-rb th {
+    background-color: #8621ca; 
+    color: white;
+}
+
+.header-te th {
+    background-color: #fc7419; 
+    color: black;
+}
+
+#playerDataContainer td {
+    padding: 10px 15px;
+}
+
+/* Hover effect on rows */
+#playerDataContainer tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Make player data container visible when populated */
+.visible {
+    display: block;
+}
+
+.player-popup {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    width: 300px;
+    height: 350px;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.popup-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+#playerImage {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.player-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.player-info h3 {
+    margin: 0 0 5px 0;
+}
+
+.player-info p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.details-and-logo {
+    display: flex;
+    align-items: center;
+}
+
+.player-details {
+    flex: 1;
+    font-size: 14px;
+}
+
+.player-details p {
     margin: 5px 0;
+}
+
+#teamLogo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-right: -100px;
+    margin-bottom: 70px;
+}
+
+#teamName {
+    margin-top: 25px;
+    margin-right: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    bottom: 25px;
+    right: 22px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background-color: #d32f2f;
+}
+
+footer {
+    background-color: #e2e2e2;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
+footer .logo img {
+    margin-right: 100px;
+    height: 80px;
+    padding-top: 10px;
 }
